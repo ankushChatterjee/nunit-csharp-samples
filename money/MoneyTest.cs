@@ -83,7 +83,7 @@ namespace Money
         public void BagSubtract()
         {
             // {[12 CHF][7 USD]} - {[14 CHF][21 USD] == {[-2 CHF][-14 USD]} 111
-            Money[] bag = { new Money(-2, "CHF"), new Money(-1423, "USD") };
+            Money[] bag = { new Money(-2, "CHF"), new Money(-14, "USD") };
             var expected = new MoneyBag(bag);
             Assert.That(fMB1.Subtract(fMB2), Is.EqualTo(expected));
         }
